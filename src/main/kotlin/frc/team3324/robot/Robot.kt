@@ -8,9 +8,8 @@ import edu.wpi.first.wpilibj.IterativeRobot
 
 class Robot: IterativeRobot() {
 
-
+    val scheduler: Scheduler = Scheduler.getInstance()
     companion object {
-        val scheduler: Scheduler = Scheduler.getInstance()
     }
 
     override fun robotInit() {
