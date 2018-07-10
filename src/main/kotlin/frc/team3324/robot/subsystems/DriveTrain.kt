@@ -26,12 +26,13 @@ object DriveTrain: Subsystem() {
 
     private val mDrive = DifferentialDrive(lMotors, rMotors)
 
-//    private val leftEncoder = Encoder(Constants.leftEncoderPortA, Constants.leftEncoderPortB, false, Encoder.EncodingType.k4X)
-//    private val rightEncoder = Encoder(Constants.rightEncoderPortA, Constants.rightEncoderPortB, false, Encoder.EncodingType.k4X)
+    private val leftEncoder = Encoder(Constants.leftEncoderPortA, Constants.leftEncoderPortB, false)
+    private val rightEncoder = Encoder(Constants.rightEncoderPortA, Constants.rightEncoderPortB, false)
 
-    fun arcadeDrive(xSpeed: Double, ySpeed: Double) {
+    fun arcadeDrive(xSpeed: Double, ySpeed: Double) { //
         mDrive.arcadeDrive(xSpeed, ySpeed, false);
     }
+
     override fun initDefaultCommand() {
 
     }
