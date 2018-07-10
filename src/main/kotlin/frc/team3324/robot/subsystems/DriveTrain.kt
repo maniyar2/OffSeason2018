@@ -1,4 +1,4 @@
-package frc.team3324.subsystems
+package frc.team3324.robot.subsystems
 
 import frc.team3324.Robot
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX
@@ -24,10 +24,8 @@ object DriveTrain: Subsystem() {
 
     private val mDrive = DifferentialDrive(lMotors, rMotors)
 
-
     private val leftEncoder = Encoder(Constants.leftEncoderPortA, Constants.leftEncoderPortB, false, Encoder.EncodingType.k4X)
     private val rightEncoder = Encoder(Constants.rightEncoderPortA, Constants.rightEncoderPortB, false, Encoder.EncodingType.k4X)
-
 
     fun arcadeDrive(xSpeed: Double, ySpeed: Double) {
         mDrive.arcadeDrive(xSpeed, ySpeed, false);

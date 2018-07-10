@@ -1,16 +1,16 @@
 package frc.team3324.robot
 
-import frc.team3324.subsystems.DriveTrain
+import frc.team3324.robot.subsystems.DriveTrain
+import frc.team3324.robot.commands.DriveGroup
 
-import edu.first.wpilibj.*
 import edu.wpi.first.wpilibj.command.Scheduler
-
+import edu.wpi.first.wpilibj.IterativeRobot
 class Robot: IterativeRobot() {
 
 
     companion object {
-    val scheduler: Scheduler = Scheduler.getInstance()
-    public val mDriveTrain = DriveTrain;
+        val scheduler: Scheduler = Scheduler.getInstance()
+        public val mDriveTrain = DriveTrain;
     }
 
     override fun robotInit() {
@@ -21,7 +21,7 @@ class Robot: IterativeRobot() {
 
     }
 
-    override fun disabldPeriodic() {
+    fun disabldPeriodic() {
 
     }
 
@@ -33,10 +33,10 @@ class Robot: IterativeRobot() {
 
     }
     override fun teleopInit() {
-	scheduler.add(new DriveGroup());
+	    scheduler.add(DriveGroup());
     }
 
     override fun teleopPeriodic() {
-    scheduler.run();
+        scheduler.run();
     }
 }

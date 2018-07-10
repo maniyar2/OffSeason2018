@@ -1,4 +1,4 @@
-package frc.team3324;
+package frc.team3324.robot
 
 import kotlin.math.PI
 
@@ -9,9 +9,6 @@ object Constants {
     const val blMotorPort = 4
     const val frMotorPort = 0
     const val brMotorPort = 2
-
-
-
     // Encoders
     const val leftEncoderPortA = 0
     const val leftEncoderPortB = 1
