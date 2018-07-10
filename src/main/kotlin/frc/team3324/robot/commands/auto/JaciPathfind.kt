@@ -16,6 +16,6 @@ public object JaciPathfind: Command() { // Class is WIP, getting teleop done fir
 
     }
     override fun isFinished() = false
-    override fun end() = Robot.mDriveTrain.arcadeDrive(0.0, 0.0)
+    override fun end() = DriveTrain.mDrive.arcadeDrive(0.0, 0.0, false)
     override fun interrupted() = this.end()
 }

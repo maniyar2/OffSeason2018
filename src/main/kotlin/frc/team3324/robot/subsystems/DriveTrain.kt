@@ -24,14 +24,10 @@ object DriveTrain: Subsystem() {
     private val brMotor = WPI_VictorSPX(Constants.brMotorPort)
     private val rMotors = SpeedControllerGroup(frMotor, brMotor)
 
-    private val mDrive = DifferentialDrive(lMotors, rMotors)
+    val mDrive = DifferentialDrive(lMotors, rMotors)
 
     private val leftEncoder = Encoder(Constants.leftEncoderPortA, Constants.leftEncoderPortB, false)
     private val rightEncoder = Encoder(Constants.rightEncoderPortA, Constants.rightEncoderPortB, false)
-
-    fun arcadeDrive(xSpeed: Double, ySpeed: Double) { //
-        mDrive.arcadeDrive(xSpeed, ySpeed, false);
-    }
 
     override fun initDefaultCommand() {
 

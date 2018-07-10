@@ -11,11 +11,10 @@ class Robot: IterativeRobot() {
 
     companion object {
         val scheduler: Scheduler = Scheduler.getInstance()
-        public val mDriveTrain = DriveTrain;
     }
 
     override fun robotInit() {
-
+        DriveTrain
     }
 
     override fun disabledInit() {

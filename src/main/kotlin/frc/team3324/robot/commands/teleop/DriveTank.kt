@@ -16,10 +16,10 @@ public object DriveTank : Command() {
     override fun execute() {
         var leftY = OI.get0LeftY()
         var rightX = OI.get0RightX()
-        Robot.mDriveTrain.arcadeDrive(leftY, rightX)
+        DriveTrain.mDrive.arcadeDrive(leftY, rightX, false)
         SmartDashboard.putNumber("LeftY:", leftY)
     }
     override fun isFinished() = false
-    override fun end() = Robot.mDriveTrain.arcadeDrive(0.0, 0.0)
+    override fun end() = DriveTrain.mDrive.arcadeDrive(0.0, 0.0, false)
     override fun interrupted() = this.end()
 }
